@@ -1,0 +1,37 @@
+First make migrations
+
+docker exec -it django_app_2 python manage.py makemigrations
+docker exec -it django_app_2 python manage.py migrate
+
+
+Follow the following command
+
+//create super user
+docker exec -it django_app_2 python manage.py createsuperuser
+
+
+
+name: admin
+email: admin@admin.com
+password: [password123]
+
+
+docker exec -it python manage.py makemigrations property_management
+
+
+installing post gis
+
+
+docker exec -it postgres_db_2 psql -U uzzal -d inventory-management-db -c "CREATE EXTENSION IF NOT EXISTS postgis;"
+
+
+check postgis version
+
+docker exec -it postgres_db_2 psql -U uzzal -d inventory-management-db -c "SELECT PostGIS_Version();"
+
+
+Run ClI command to send csv file data to database 
+
+docker-compose exec web python manage.py import_data
+
+

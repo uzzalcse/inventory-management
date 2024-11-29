@@ -31,3 +31,15 @@ class Student(models.Model):
     # String representation of the object
     def __str__(self):
         return self.name
+    
+
+class Teacher(models.Model):
+    # Define fields for the student model
+    id = models.AutoField(primary_key=True)  # Automatically increments (Primary Key)
+    name = models.CharField(max_length=100)  # Name of the student
+    city = models.CharField(max_length=100)  # City where the student resides
+    cgpa = models.DecimalField(max_digits=4, decimal_places=2)  # CGPA with two decimal places
+
+    # String representation of the object
+    def __str__(self):
+        return self.name
