@@ -1,0 +1,51 @@
+# Django specific
+*.log
+*.pot
+*.pyc
+*.pyo
+__pycache__
+db.sqlite3
+/static/
+media/
+*.sqlite3
+*.db
+
+# Docker specific
+docker-compose.override.yml
+*.dockerfile
+**/*.dockerfile
+.dockerignore
+
+# PostgreSQL data (this is the volume for PostgreSQL)
+postgres_data/
+
+# Virtual environment
+env/
+venv/
+.venv/
+
+# Python-specific
+*.py[cod]
+*$py.class
+.idea/
+.vscode/
+
+# IDE files
+.vscode/
+.idea/
+
+# macOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+
+# Test and coverage reports
+.coverage
+*.coveragerc
+nosetests.xml
+coverage.xml
+*.hypothesis/
+
+# Django migrations
+*/migrations/*
